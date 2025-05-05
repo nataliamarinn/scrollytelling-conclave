@@ -28,4 +28,4 @@ Este análisis en formato scrollytelling tiene múltiples propósitos:
 
 ## ¿Cómo explorar este Scrollytelling?
 
-Para experimentar el análisis, visitá el siguiente enlace: [Enlace a tu página web/archivo HTML generado]"]
+Para experimentar el análisis, visitá el siguiente [enlace](https://rpubs.com/natimarinn17/scrollytelling-conclaves)
