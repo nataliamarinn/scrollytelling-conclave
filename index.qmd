@@ -1,0 +1,207 @@
+---
+title: "¿Quién elige al Papa?"
+description: "Un recorrido visual e interactivo por los cónclaves del siglo XX y XXI: edades, geografías, y la evolución del cuerpo cardenalicio."
+author: Natalia Marín
+date: "2025/05/01"
+image: images/featured.png
+execute:
+  eval: true
+  echo: false
+  warning: false
+  message: false
+freeze: auto
+format:
+  closeread-html:
+    css: styles.css
+    cr-style:
+      section-background-color: "#780000"       
+      narrative-text-color: "#fdf0d5"           
+      heading-color: "#fdf0d5"                  
+      sticky-background-color: "#003049"        
+      sticky-border: "1px solid #fdf0d5"
+      sticky-border-radius: "10px"
+      narrative-font-family: "Roca Two"
+      narrative-font-size: 16px
+      heading-font-size: 22px
+      transition-duration: "0.4s"
+    remove-header-space: true
+    debug-mode: false
+    embed-resources: true
+---
+
+
+```{r}
+#| include: false
+source("src/conclave_r.R")
+```
+
+::: {.cr-section}
+
+::: {#cr-conclave-img .scale-to-fill}
+![](img/conclave1.jpg)
+:::
+
+
+***Habemus Data: visualizando la evolución de los cónclaves***
+<br>
+*Análisis visual de las elecciones papales desde 1958 hasta el presente.* @cr-conclave-img
+
+
+
+
+
+
+
+:::
+
+
+::: {.cr-section}
+
+::: {#cr-conclave-img2 .scale-to-fill}
+![](img/conclave3.jpg)
+:::
+
+
+Como argentinos, no podemos mirar hacia Roma sin pensar en Francisco.
+<br>
+Mientras ***"Conclave"***, la película película nominada al Oscar, despertó curiosidad global, los datos reales nos cuentan otra historia: @cr-conclave-img2
+
+
+**¿Quiénes eligen al Papa? ¿Qué edad tienen? ¿Desde dónde vienen?**
+
+*A continuación un breve análisis de los últimos cónclaves.*
+
+
+
+
+:::
+
+
+
+
+::: {.cr-section}
+
+::: {#cr-grafico1 .scale-to-fill}
+```{r}
+plotly_grafico1
+```
+
+:::
+@cr-grafico1
+
+# La expansión del colegio cardenalicio
+
+
+La evolución del cuerpo electoral papal refleja la transformación de la Iglesia Católica moderna. En 1958, apenas 51 cardenales eligieron a Juan XXIII, mientras que el próximo cónclave reunirá a 133 cardenales de los cinco continentes.
+
+:::
+
+
+::: {.cr-section}
+
+::: {#cr-grafico2 .scale-to-fill}
+```{r}
+plotly_grafico
+```
+
+:::
+@cr-grafico2
+
+# Un cónclave para una iglesia global: la evolución continental de los cardenales electores
+
+La composición geográfica del Colegio Cardenalicio ha experimentado una metamorfosis notable. 
+Esta visualización muestra un declive en la proporción europea y un ascenso gradual de cardenales africanos, asiáticos y americanos.
+:::
+
+::: {.cr-section}
+
+::: {#cr-grafico3 .scale-to-fill}
+![Distribución de edades de los electores por cónclave](img/grafico3.png)
+:::
+
+# El factor edad en el cónclave: entre la experiencia y la renovación
+
+@cr-grafico3
+
+La visualización muestra la distribución de edades de los cardenales electores a lo largo de los cónclaves desde 1958 hasta el próximo cónclave. Este patrón de edades revela algunas fluctuaciones.  
+
+
+Un punto de inflexión clave ocurrió en 1970, cuando el Papa Pablo VI estableció un límite de edad, excluyendo a cardenales mayores de 80 años del derecho a voto. Esta reforma histórica explica la reducción de la edad máxima de los electores a partir del cónclave de 1978.
+
+<br>
+
+En los cónclaves de 1958 y 1963 observamos una edad promedio entre 72 y 74 años, mientras que en 1978 desciende a 67 años. Para los cónclaves recientes la media se ha estabilizado alrededor de los 72 años. 
+
+:::
+
+::: {.cr-section}
+
+::: {#cr-grafico4 .scale-to-fill}
+```{r}
+fig
+```
+
+:::
+
+# El atlas de los electores: la huella de nacionalides a través del tiempo
+@cr-grafico4
+
+Deslizando la barra desde 1958 hasta 2025, este mapa interactivo despliega la historia de cambio de la Iglesia católica. 
+
+En el pasado, el corazón del poder cardenalicio latía con fuerza en Europa. Pero al avanzar en el tiempo, el color naranja se expande, tiñendo nuevos rincones del planeta. Mayor participación de países asiáticos, africanos y de Oceanía.
+
+:::
+
+
+::: {.cr-section}
+
+::: {#cr-grafico5 .scale-to-fill}
+
+```{r}
+library(DT)
+
+datatable(tabla_top,
+  rownames = FALSE,
+  options = list(
+    dom = 't',
+    pageLength = nrow(tabla_top),
+    ordering = FALSE,
+    scrollX = TRUE
+  ),
+  class = 'cell-border stripe hover nowrap custom-dt',
+  escape = FALSE
+)
+
+```
+
+:::
+
+# Las nacionalidades más dominantes a través del tiempo
+
+@cr-grafico5
+
+La tabla revela los seis países con mayor representación de cardenales electores en los últimos cónclaves y en el que tendrá lugar en los próximos días. 
+
+Italia y Estados Unidos se mantienen consistentes en los primeros puestos, sin embargo, también se observa el ascenso y descenso de países como Francia, Brasil, España, Alemania y Argentina.
+:::
+
+
+
+::: {.cr-section}
+
+::: {#cr-conclave-img4 .scale-to-fill}
+![](img/conclave5.jpg)
+:::
+
+
+La cuenta regresiva ha comenzado. Pronto, los ojos del mundo se posarán en el Vaticano para presenciar la elección del nuevo Papa. @cr-conclave-img4
+
+¡Muchas gracias por leer! Si te interesa profundizar en este tipo de visualizaciones y análisis de datos, te invito a visitar mi [GitHub](https://github.com/nataliamarinn/scrollytelling-conclave)  
+
+
+
+
+
+
+:::
+

@@ -1,0 +1,132 @@
+/* ------------------------
+   IMPORTACIÓN DE FUENTES
+------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Roca+Two&display=swap');
+
+/* ------------------------
+   FONDO GENERAL Y TEXTO
+------------------------ */
+body {
+  background-color: #780000;
+  font-family: 'Roca Two', serif;
+  color: #fdf0d5;
+}
+
+/* Fondo distinto para la columna narrativa */
+.cr-section .narrative-col {
+  background-color: #4d0000 !important;
+  padding: 2em;
+  border-radius: 15px;
+}
+
+
+
+/* Expande el sticky para la imagen */
+#cr-conclave-img img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* o 100vh si querés ocupar todo el alto visible */
+  object-fit: cover;
+}
+/* Quita márgenes generales de página */
+body, html {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Asegura que la sección ocupe el 100% del ancho sin márgenes */
+.cr-section {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+}
+
+/* ------------------------
+   TÍTULOS
+------------------------ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roca Two', serif;
+  color: #fdf0d5;
+  font-size: 36px;
+}
+
+/* ------------------------
+   TEXTO NARRATIVO Y TRIGGERS
+------------------------ */
+.narrative, .trigger, .cr-section p {
+  font-family: 'Roca Two', serif;
+  color: #fdf0d5;
+  font-size: 25px;
+}
+
+/* ------------------------
+   SECCIONES CLOSEAD
+------------------------ */
+.cr-section {
+  background-color: #780000 !important;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+/* ------------------------
+   STICKIES
+------------------------ */
+.cr-sticky {
+  background-color: #003049;
+  color: #fdf0d5;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid #fdf0d5;
+  transition: all 0.4s ease-in-out;
+}
+
+.cr-sticky:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------------
+   TÍTULOS DENTRO DE .cr-section
+------------------------ */
+.cr-section h1,
+.cr-section h2,
+.cr-section h3,
+.cr-section h4,
+.cr-section h5,
+.cr-section h6 {
+  color: #fdf0d5 !important;
+  font-family: 'Roca Two', serif !important;
+}
+
+/* ------------------------
+   TABLAS DT PERSONALIZADAS
+------------------------ */
+.custom-dt table.dataTable {
+  background-color: transparent !important;
+  color: #fdf0d5 !important;
+  border-collapse: collapse;
+}
+
+.custom-dt tbody td {
+  background-color: transparent !important;
+  color: #fdf0d5 !important;
+  border: 1px solid #fdf0d5 !important;
+}
+
+.custom-dt thead th {
+  background-color: transparent !important;
+  color: #fdf0d5 !important;
+  border-bottom: 2px solid #fdf0d5 !important;
+}
+
+/* Fondo del contenedor completo */
+.custom-dt {
+  background-color: transparent !important;
+}
+
+/* ------------------------
+   PLOTLY / GRÁFICOS INTERACTIVOS
+------------------------ */
+.js-plotly-plot .plotly {
+  background-color: transparent !important;
+}
